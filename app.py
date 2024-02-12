@@ -27,6 +27,11 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+@app.route('/healthcheck', methods=['GET'])
+def healthcheck():
+       print('Healthcheck request')
+       return render_template('hello.html', name = 'healthcheck')
+
 
 if __name__ == '__main__':
    app.run()
