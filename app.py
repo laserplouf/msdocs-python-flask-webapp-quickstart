@@ -1,4 +1,6 @@
 import os
+from flask import Flask
+
 import logging
 from opencensus.ext.azure.log_exporter import AzureLogHandler
 from opencensus.ext.azure.trace_exporter import AzureExporter
